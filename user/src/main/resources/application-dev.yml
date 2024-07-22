@@ -1,0 +1,33 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /api/v1
+
+spring:
+  application:
+    name: garuda-user
+  active: dev
+
+logging:
+  level:
+    com.garuda.user: DEBUG
+  pattern:
+    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+
+garuda:
+  notification-url: ${NOTIFICATION_ENDPOINT}
+
+management:
+  web:
+    exposure:
+      include: health
+  otlp:
+    metrics:
+      export:
+        url: ${METRIC_ENDPOINT}
+        step: 5s
+    tracing:
+      endpoint: ${TRACING_ENDPOINT}
+  tracing:
+    sampling:
+      probability: 1.0
