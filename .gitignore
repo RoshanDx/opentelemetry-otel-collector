@@ -199,3 +199,9 @@ README.html
 *.iml
 .idea
 .exercism
+/notification/.mvn/wrapper/maven-wrapper.properties
+/user/.mvn/wrapper/maven-wrapper.properties
+/notification/mvnw
+/user/mvnw
+/notification/mvnw.cmd
+/user/mvnw.cmd
