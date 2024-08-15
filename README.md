@@ -1,8 +1,8 @@
 # How to run?
-
-1. Run ```make build-all```
-2. After build complete, run ```docker-compose up```
-3. Once all services are up, you can fire this api,
+1. Install make
+2. Run ```make build-all```
+3. After build complete, run ```docker-compose up```
+4. Once all services are up, you can fire this api,(other calls are in their respective controllers)
 ```curl -X POST -H "Content-Type: application/json" -d "{\"name\":\"Wick\"}" http://localhost:8081/api/v1/user```
 
 ## Jaeger [http://localhost:16686/]
